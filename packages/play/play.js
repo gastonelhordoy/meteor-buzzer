@@ -1,0 +1,1 @@
+Play = Npm.require("play");
