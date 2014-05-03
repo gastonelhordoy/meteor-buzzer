@@ -5,7 +5,8 @@
 
 standard-app-packages
 buzz.js
-accounts-ui
 accounts-password
 streams
 play
+zurb-foundation
+accounts-ui

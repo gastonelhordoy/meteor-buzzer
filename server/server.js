@@ -1,7 +1,20 @@
 Meteor.startup(function () {
     console.log('BUZZER started...');
 
-    // restricted messages to logged-in users
+    // define a filter to transform the message and add username
+    stream.addFilter(function(eventName, args) {
+        if (eventName === SELECTION_EVENT_NAME) {
+            var user = Meteor.users.findOne({_id: this.userId}, {fields: {'username': 1}});
+            args[0] = {
+                username : user.username,
+                soundId : args[0],
+                timestamp : new Date()
+            };
+        }
+        return args;
+    });
+
+    // restrict messages to logged-in users
     stream.permissions.write(function(eventName) {
         return this.userId !== null;
     }, false);

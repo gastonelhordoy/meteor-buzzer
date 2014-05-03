@@ -1,0 +1,27 @@
+<template name="header">
+  <div class="fixed contain-to-grid">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name"><h1><a href="#">Meteor Buzzer</a></h1></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="left">
+          {{#each sounds}}
+          <li class="divider"></li>
+          <li><div class="button" soundName="{{this}}">{{this}}</div></li>
+          {{/each}}
+        </ul>
+
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="divider"></li>
+          <li>{{> loginButtons align="right"}}</li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+</template>

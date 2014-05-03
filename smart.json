@@ -1,6 +1,7 @@
 {
   "packages": {
     "buzz.js": {},
-    "streams": {}
+    "streams": {},
+    "zurb-foundation": {}
   }
 }
