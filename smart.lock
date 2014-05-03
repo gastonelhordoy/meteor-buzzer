@@ -4,7 +4,8 @@
     "basePackages": {
       "buzz.js": {},
       "streams": {},
-      "zurb-foundation": {}
+      "zurb-foundation": {},
+      "moment": {}
     },
     "packages": {
       "buzz.js": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/MixinLabs/meteor-foundation.git",
         "tag": "v5.2.2-0.0.1",
         "commit": "afe432020cc6246fa0a243a6d2e1e031f08d98e3"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.6.0",
+        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
       }
     }
   }

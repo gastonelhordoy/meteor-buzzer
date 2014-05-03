@@ -2,6 +2,7 @@
   "packages": {
     "buzz.js": {},
     "streams": {},
-    "zurb-foundation": {}
+    "zurb-foundation": {},
+    "moment": {}
   }
 }

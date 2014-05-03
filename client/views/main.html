@@ -1,7 +1,19 @@
 <template name="main">
   <div class="row">
-    <div class="large-12 columns">
+    <div class="small-11 columns">
       <h1>BuzzLog</h1>
     </div>
+    <div class="small-1 columns">
+      <div class="button alert small radius right">CLEAR</div>
+    </div>
   </div>
+
+  {{#each messages}}
+  <div class="row">
+    <div class="small-4 large-3 columns">{{formatDate timestamp "short"}}</div>
+    <div class="small-4 large-6 columns">{{username}}</div>
+    <div class="small-4 large-2 columns">{{soundName}}</div>
+    <div class="large-1 columns"><div class="button tiny round right" soundName="{{soundName}}">PLAY</div></div>
+  </div>
+  {{/each}}
 </template>
