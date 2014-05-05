@@ -3,7 +3,8 @@ Accounts.ui.config({
 });
 
 var DateFormats = {
-    short: 'YYYY/MM/DD'
+    'short' : 'YYYY/MM/DD',
+    'short-time' : 'YYYY/MM/DD HH:mm:ss'
 };
 
 UI.registerHelper('formatDate', function(datetime, format) {
@@ -23,6 +24,7 @@ for (i = 0; i < sounds.length; i++) {
         player: new buzz.sound('/sounds/' + sounds[i] + '.wav', { preload: true })
     };
 }
+// TODO incrementally load sounds in the background with Meteor.setInterval(func, delay)
 
 // Register to selection events
 messages = new Meteor.Collection(null);

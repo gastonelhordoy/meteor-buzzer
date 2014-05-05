@@ -9,7 +9,7 @@ Template.main.events({
         var soundName = $(event.target).attr('soundName');
         soundsMap[soundName].player.play();
     },
-    'click div.button:contains(CLEAR)' : function (event) {
+    'click #clearLog' : function (event) {
         messages.remove({});
     }
 });

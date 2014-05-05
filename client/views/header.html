@@ -4,7 +4,7 @@
       <ul class="title-area">
         <!-- Title Area -->
         <li class="name"><h1><a href="#">Meteor Buzzer</a></h1></li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
 
       <section class="top-bar-section">
@@ -12,14 +12,15 @@
         <ul class="left">
           {{#each sounds}}
           <li class="divider"></li>
-          <li><div class="button" soundName="{{this}}">{{this}}</div></li>
+          <li><a soundName="{{this}}">{{this}}</a></li>
           {{/each}}
         </ul>
 
         <!-- Right Nav Section -->
         <ul class="right">
           <li class="divider"></li>
-          <li>{{> loginButtons align="right"}}</li>
+          <li>{{> loginButtons}}</li>
+          <!-- li>{{> loginButtons align="right"}}</li -->
         </ul>
       </section>
     </nav>
