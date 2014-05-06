@@ -1,6 +1,11 @@
 Accounts.ui.config({
     passwordSignupFields: 'USERNAME_ONLY'
 });
+Deps.autorun(function () {
+  if (Meteor.user()) {
+    messages.remove({});
+  }
+});
 
 var DateFormats = {
     'short' : 'YYYY/MM/DD',

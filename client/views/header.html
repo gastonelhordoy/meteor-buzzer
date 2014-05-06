@@ -3,18 +3,20 @@
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <!-- Title Area -->
-        <li class="name"><h1><a href="#">Meteor Buzzer</a></h1></li>
+        <li class="name"><h1><a>Meteor Buzzer</a></h1></li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
 
       <section class="top-bar-section">
         <!-- Left Nav Section -->
+        {{#if currentUser}}
         <ul class="left">
           {{#each sounds}}
           <li class="divider"></li>
           <li><a soundName="{{this}}">{{this}}</a></li>
           {{/each}}
         </ul>
+        {{/if}}
 
         <!-- Right Nav Section -->
         <ul class="right">

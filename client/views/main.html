@@ -1,9 +1,10 @@
 <template name="main">
+  {{#if currentUser}}
   <div class="row">
-    <div class="small-11 columns">
+    <div class="medium-9 columns">
       <h1>BuzzLog</h1>
     </div>
-    <div class="small-1 columns">
+    <div class="medium-3 columns">
       <div id="clearLog" class="button alert small radius right">CLEAR</div>
     </div>
   </div>
@@ -16,4 +17,11 @@
     <div class="small-3 medium-1 columns"><div class="button tiny round right" soundName="{{soundName}}">PLAY</div></div>
   </div>
   {{/each}}
+  {{else}}
+  <div class="row">
+    <div class="columns">
+      <h1>Please sign in</h1>
+    </div>
+  </div>
+  {{/if}}
 </template>

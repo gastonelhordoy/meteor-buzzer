@@ -25,6 +25,6 @@ Meteor.startup(function () {
     // register the server itself to the event so it can react upon messages
     stream.on(SELECTION_EVENT_NAME, function(message) {
         console.log('%s from user [%s]: %j', SELECTION_EVENT_NAME, this.userId, message);
-        //play.sound('../public/sounds/alarm.wav');
+        // Play.sound('../public/sounds/alarm.wav');
     });
 });
