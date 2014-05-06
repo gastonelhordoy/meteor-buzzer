@@ -7,7 +7,15 @@ Template.header.helpers({
 Template.header.events({
     'click a[soundName]' : function (event) {
         var soundName = $(event.target).attr('soundName');
-        stream.emit(SELECTION_EVENT_NAME, soundsMap[soundName].id);
+        var soundId = soundsMap[soundName].id;
+
+        stream.emit(SELECTION_EVENT_NAME, soundId);
+        messages.insert({
+            username: 'me',
+            soundId: soundId,
+            soundName: soundName,
+            timestamp : new Date()
+        });
     }
 });
 
